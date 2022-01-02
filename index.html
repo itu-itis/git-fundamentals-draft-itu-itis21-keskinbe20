@@ -28,11 +28,14 @@ h1 {color: red;
 </style>
 
 </head>
-<body>
+<body onload = "document.body.style.backgroundColor = 'pink' ; sayHello()"
+onresize= "document.body.style.backgroundColor = 'lightblue' "
+onkeydown  = "document.body.style.backgroundColor = 'lightyellow' "
+onkeyup = "document.body.style.backgroundColor = 'white'  ">
 <p>
 <strong> Introduction to Information Systems </strong>
 </p>
-<p class = "centered">
+<p class = "centered" onmouseover ='document.querySelector(".centered").style.font="bold 20pt arial , serif" '>
 <em>
 Beyza Nur Keskin
 <br>
@@ -44,18 +47,20 @@ Beyza Nur Keskin
 <p>
 Evolution of homo species
 </p>
-<ul>
+<ul id = 'ul-01' onmouseover ="document.getElementById('ul-01').style.backgroundColor = 'purple' ">
 <li> Homo habilis (able man) </li>
 <li> Homo erectus (upright man) </li>
 <li> Homo neanderthalensis  </li>
 <li> Homo floresiensis (hobbit) </li>
 <li> Homo sapiens (wise man) </li>
-<ul>
+<ul id = 'ul-02' onclick = "document.getElementById('ul-02').style.backgroundColor = 'orange' " >
 <li> Homo sapiens sapiens </li>
 </ul>
 </ul>
 
-<h1> <strong> Human Evolution </strtong></h1>
+<h1 onmouseover= "style.color= 'orange'; style.backgroundColor = 'lightgreen ' "
+onmouseout = "style.color= 'red'; style.backgroundColor = 'white' " >
+<strong> Human Evolution </strtong></h1>
 
 <p>
 <img src ="evolution-diagram.png">
@@ -69,7 +74,7 @@ Biology Online
 <h2><strong>the clickable image</strong></h2>
 <p> this image is clickable click on it and try
 <a href ="https://www.biologyonline.com/dictionary/homo-sapiens-sapiens">
-<img src ="evolution-diagram.png">
+<img id='img-01' alt = 'Evolution Diagram '  onclick= "alert(document.getElementById('img-01').alt)"  src ="evolution-diagram.png">
 </a>
 </p>
 
@@ -148,6 +153,12 @@ a category that living humans belong to.
 
 </pre>
 
+<script>
+function sayHello() {
+alert("Welcome abroad!");
+}
+
+</script>
 
 </body>
 
